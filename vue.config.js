@@ -1,5 +1,13 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
-  publicPath: 'qr-code-generator',
-  transpileDependencies: true
+  publicPath: '',
+  transpileDependencies: true,
+  chainWebpack: config => {
+    config
+        .plugin('html')
+        .tap(args => {
+          args[0].title = "QR Code Generator";
+          return args;
+        })
+  }
 })

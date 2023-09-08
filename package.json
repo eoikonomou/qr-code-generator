@@ -11,7 +11,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d dist"
   },
   "main": "index.js",
   "dependencies": {
@@ -27,6 +28,7 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^6.0.0",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
